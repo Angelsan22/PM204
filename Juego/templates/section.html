@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ section.title }}</h2>
+<ul>
+    {% for item in section.content %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+<form method="POST">
+    {% for q in section.questions %}
+        <p>{{ q.q }}</p>
+        <input type="text" name="answer">
+    {% endfor %}
+    <p>
+        <label><input type="checkbox" name="commit"> Check de Compromiso</label>
+    </p>
+    <button type="submit">Validar</button>
+</form>
+{% endblock %}
