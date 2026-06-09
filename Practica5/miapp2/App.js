@@ -19,15 +19,20 @@ export default function App() {
       <Text>Hola Mundo RN</Text>
         <Text>-------------------------------------</Text>
 
-      <Saludo />
+ {/*      <Saludo />
       <Saludo></Saludo>
         <Text>-------------------------------------</Text>
 
       <Saludo2/>
 
-        <Text>-------------------------------------</Text>
+        <Text>-------------------------------------</Text> */}
       
-      <Perfil/>
+      <Perfil 
+      nombre="Sánchez Liares José Ángel" 
+      carrera="ISC" 
+      materia="Programación Móvil" 
+      cuatri="9no"
+      />
       
       <StatusBar style="auto" />
     
