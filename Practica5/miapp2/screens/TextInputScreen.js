@@ -64,7 +64,7 @@ export default function App() { // Componente principal de la app
     } else if (!email.includes('@')) { // Caso 2: no tiene arroba, no es válido
       mostrarAlerta('Email inválido', 'Tu correo debe contener el símbolo @');
     } else { // Caso 3: pasó las validaciones
-      mostrarAlerta('Email válido', `${email} tiene un formato correcto`);
+      mostrarAlerta('Email válido', `${email} tiene un formato correcto`);  
     }
   };
  
