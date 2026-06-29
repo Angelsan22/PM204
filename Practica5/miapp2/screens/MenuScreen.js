@@ -60,21 +60,21 @@ export default function MenuScreen() {
                         <Button title='Practica TextInput' onPress={() => setScreen('TextInputScreen')}/>
                         </View>
 
-                        <view styles={styles.Button}>
+                        <View styles={styles.Button}>
                         <Button title='Practica FlatList' onPress={() => setScreen('FlatListScreen')}/>
-                        </view>
+                        </View>
 
-                        <view styles={styles.Button}>
+                        <View styles={styles.Button}>
                         <Button title='Practica ImageBackground' onPress={() => setScreen('ImageBackgroungScreen')}/>
-                        </view>
+                        </View>
 
-                        <view styles={styles.Button}>
+                        <View styles={styles.Button}>
                         <Button title='Practica ActivityIndicator' onPress={() => setScreen('ActivityIndicatorScreen')}/>
-                        </view>
+                        </View>
 
-                        <view styles={styles.Button}>
+                        <View styles={styles.Button}>
                         <Button title='Practica Model' onPress={() => setScreen('ModelScreen')}/>
-                        </view>
+                        </View>
 
 
                     <StatusBar style="auto" />

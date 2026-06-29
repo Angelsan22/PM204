@@ -1,7 +1,5 @@
-/* Zona1: Importaciones componentes y archivos*/
 import { View, Text, StyleSheet, FlatList, SectionList } from 'react-native';
 
-/* Zona2: Main - Componentes*/
 export default function FlatListScreen() {
 
   const frutas = [
@@ -9,12 +7,19 @@ export default function FlatListScreen() {
     { id: '2', nombre: 'Plátano' },
     { id: '3', nombre: 'Naranja' },
     { id: '4', nombre: 'Mango' },
+    { id: '5', nombre: 'Piña' },
+    { id: '6', nombre: 'Uva' },
+    { id: '7', nombre: 'Fresa' },
+    { id: '8', nombre: 'Naranja' },
+    { id: '9', nombre: 'Mandarina'},
+    { id: '10', nombre: 'Sandia'},
   ];
 
   const tareas = [
-    { titulo: 'Mañana', data: ['Hacer ejercicio', 'Desayunar'] },
-    { titulo: 'Tarde', data: ['Estudiar', 'Hacer tarea'] },
-  ];
+    { titulo: 'Mañana', data: ['Desayunar','Hacer ejercicio', 'Hacer labores domesticas'] },
+    { titulo: 'Tarde', data: ['Estudiar', 'Hacer tarea', 'Comer'] },
+    { titulo: 'Noche', data: ['Bañarse', 'Cenar', 'Dormir temprano'] },
+  ];  
 
   return (
     <View style={styles.container}>
@@ -30,9 +35,9 @@ export default function FlatListScreen() {
         )}
       />
 
-      <Text stylo={styles.titulo}>SectionList</Text>
+      <Text style={styles.titulo}>SectionList</Text>
       <SectionList
-        section={tareas}
+        sections={tareas}
         keyExtractor={(item, index) => item + index}
         renderItem={({item}) => (
           <View style={styles.tarjeta}>
