@@ -89,10 +89,14 @@ export default function MenuScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    flexDirection: 'colum-reverse',
+    justifyContent: 'center',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
-    flexDirection: 'row',
   },
+
+  boton: {
+    padding:10,
+    margin:15,
+  }
 
 });
