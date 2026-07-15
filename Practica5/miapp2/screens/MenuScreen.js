@@ -73,7 +73,7 @@ export default function MenuScreen() {
                         </View>
 
                         <View styles={styles.Button}>
-                        <Button title='Practica Model' onPress={() => setScreen('ModelScreen')}/>
+                        <Button title='Practica Model' onPress={() => setScreen('ModalScreen')}/>
                         </View>
 
 
