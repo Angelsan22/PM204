@@ -1,14 +1,16 @@
 
-import {SafeAreaView,View,Text,FlatList,StyleSheet,} from 'react-native';
+import {SafeAreaView, View, Text, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
 import React, {useState, useEffect} from 'react';
+import { useRouter } from 'expo-router';
 
 export default function ConsultaUsuariosScreen() {
 
   const [usuarios ,setUsuarios] = useState([]);
+  const router = useRouter();
 
   const obtenerUsuarios= async() => {
     try{
-      const respuesta = await fetch('http://localhost:5000/v1/usuarios/');
+      const respuesta = await fetch('http://192.168.100.14:5000/v1/usuarios/');
       const datos = await respuesta.json();
       console.log("Respuesta del API: ", datos);
 
@@ -32,6 +34,10 @@ export default function ConsultaUsuariosScreen() {
       <Text style={styles.info}>
         Edad: {item.edad} años
       </Text>
+      
+      <TouchableOpacity onPress={() => router.push({ pathname: '/detalles/[id]', params: { id: item.id, nombre: item.nombre, edad: item.edad } })}>
+        <Text style={styles.detallesText}>Ver detalles -{'>'}</Text>
+      </TouchableOpacity>
 
     </View>
   );
@@ -105,5 +111,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#4B5563',
   },
+  detallesText: {
+    color: '#3b82f6',
+    textAlign: 'right',
+    marginTop: 10,
+    fontWeight: '600'
+  }
 
 });
