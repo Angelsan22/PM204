@@ -16,7 +16,7 @@ export default function ActualizarUsuario() {
     }
 
     try {
-      const response = await fetch(`http://192.168.100.14:5000/v1/usuarios/${params.id}`, {
+      const response = await fetch(`http://10.100.254.83:5000/v1/usuarios/${params.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
